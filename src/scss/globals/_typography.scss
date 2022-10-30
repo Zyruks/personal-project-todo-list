@@ -1,0 +1,9 @@
+@use "../abstract" as *;
+
+/***************** 
+ header typography 
+*****************/
+
+ul {
+  font-size: var(--fluid-fs-400);
+}

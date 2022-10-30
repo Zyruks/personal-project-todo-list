@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO List</title>
+    <!-- favicon responsive -->
+    <link rel="shortcut icon" href="favicons/favicon.ico" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="./assets/favicons/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="228x228"
+      href="./assets/favicons/favicon-228x228.png"
+    />
+
+    <!-- favicon responsive end-->
+
+    <!-- google stuff -->
+
+    <!-- google stuff end-->
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- styles end -->
+  </head>
+
+  <body class="bg-primary-400">
+    <div class="list-container js-list-container">
+      <div class="input-container">
+        <input
+          type="text"
+          placeholder="Add"
+          class="input-field js-input-field"
+        />
+        <button class="input-field-btn js-input-field-btn">+</button>
+      </div>
+      <ul class="todo-list text-neutral-100 js-todo-list">
+        <li class="list js-list">
+          <div class="arrows-container">
+            <img
+              class="arrows arrow--up js-arrow--up"
+              src="./assets/svg/arrow-up.svg"
+              alt="arrow up"
+              data-state="up"
+            />
+            <img
+              class="arrows arrow--down js-arrow--down"
+              src="./assets/svg/arrow-up.svg"
+              alt="arrow down"
+              data-state="down"
+            />
+          </div>
+          <input type="checkbox" class="checkbox js-checkbox" />
+          <span> This is a new list </span>
+          <img
+            src="./assets/svg/cancel.svg"
+            alt="cancel button"
+            class="delete js-delete"
+          />
+        </li>
+        <li class="list js-list">
+          <div class="arrows-container">
+            <img
+              class="arrows arrow--up js-arrow--up"
+              src="./assets/svg/arrow-up.svg"
+              alt="arrow up"
+              data-state="up"
+            />
+            <img
+              class="arrows arrow--down js-arrow--down"
+              src="./assets/svg/arrow-up.svg"
+              alt="arrow down"
+              data-state="down"
+            />
+          </div>
+          <input type="checkbox" class="checkbox js-checkbox" />
+          <span contenteditable="true">Second Item</span>
+          <img
+            src="./assets/svg/cancel.svg"
+            alt="delete button"
+            class="delete js-delete"
+          />
+        </li>
+      </ul>
+      <div class="complete-list-container">
+        <div class="title-container">
+          <p class="js-complete-list-p">Complete List</p>
+          <img
+            class="title-triangle"
+            src="./assets/svg/triangle.svg"
+            alt="triangle illustration"
+          />
+        </div>
+        <ul class="complete-list js-complete-list"></ul>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

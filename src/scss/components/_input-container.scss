@@ -1,0 +1,53 @@
+.input-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.input-field {
+  all: unset;
+
+  border: none;
+
+  color: hsl(0deg, 0%, 100%);
+
+  font-size: 1.25rem;
+  text-align: center;
+
+  background-color: transparent;
+
+  transition: border 300ms ease-in-out;
+
+  border-block-end: 1px solid hsl(240deg, 38%, 10%);
+  margin-inline: auto;
+
+  &:hover,
+  &:active {
+    border-block-color: hsl(0deg, 0%, 100%);
+  }
+}
+
+input:placeholder-shown {
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+
+.input-field-btn {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 999999rem;
+
+  color: hsl(0deg, 0%, 100%);
+  padding-inline: 1rem;
+
+  background-color: transparent;
+  inline-size: 100%;
+  block-size: 100%;
+
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  &:hover {
+    color: hsl(0deg, 0%, 5%);
+
+    background-color: hsl(0deg, 0%, 100%);
+  }
+}

@@ -1,0 +1,93 @@
+@use "../abstract" as *;
+
+/********************  \
+ 
+** Todo list 
+
+\ ********************/
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: rem(40) rem(50) 1fr rem(40);
+  gap: rem(36);
+
+  align-items: center;
+  inline-size: 100%;
+  padding: rem(6);
+  max-inline-size: rem(500);
+  margin-inline: auto;
+  border-radius: rem(15);
+}
+
+.list:first-child {
+  margin-block-start: rem(30);
+}
+
+// arrow section
+.arrows-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.arrows {
+  block-size: 1.8rem;
+}
+
+.arrows[data-state="down"] {
+  transform: rotate(180deg);
+}
+
+.list span {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+}
+
+/********************  \
+ 
+** Todo list End
+
+\ ********************/
+
+/********************  \
+ 
+** Complete list 
+
+\ ********************/
+
+.title-container {
+  display: flex;
+  gap: rem(10);
+  align-items: center;
+  justify-content: center;
+}
+
+.title-triangle {
+  transform: rotate(90deg);
+
+  transition: transform 500ms ease-in-out;
+  inline-size: rem(15);
+}
+
+.complete-list-container {
+  margin-block-start: rem(50);
+
+  border-block-start: 1px rgba(255, 255, 255) solid;
+
+  block-size: 13%;
+
+  overflow: hidden;
+
+  transition: block-size 500ms ease-in-out;
+}
+
+/********************  \
+ 
+** Complete list End
+
+\ ********************/

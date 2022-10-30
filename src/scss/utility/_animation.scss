@@ -1,0 +1,47 @@
+@use "../abstract" as *;
+
+@keyframes anima-shake {
+  0% {
+    transform: translateX(rem(6));
+  }
+
+  100% {
+    transform: translate(rem(-6));
+  }
+}
+
+.anima-shake {
+  animation: anima-shake 100ms alternate infinite ease-in-out;
+}
+
+@keyframes anima-up-to-start {
+  0% {
+    transform: translateY(rem(-30));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.anima-up-to-start {
+  animation: anima-up-to-start 300ms ease-in-out forwards;
+}
+
+.anima-shake {
+  animation: anima-shake 100ms alternate infinite ease-in-out;
+}
+
+@keyframes anima-down-to-start {
+  0% {
+    transform: translateY(rem(30));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.anima-down-to-start {
+  animation: anima-down-to-start 300ms ease-in-out forwards;
+}

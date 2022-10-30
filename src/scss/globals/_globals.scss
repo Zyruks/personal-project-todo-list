@@ -1,0 +1,131 @@
+@use "../abstract" as *;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: var(--ff-body);
+}
+
+body {
+  color: var(--clr-neutral-600);
+  font-weight: var(--fw-400);
+  font-size: var(--fluid-fs-400);
+
+  line-height: var(--lh-700);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-700);
+  font-family: var(--ff-headings);
+  line-height: var(--lh-500);
+}
+
+h1 {
+  font-size: var(--fluid-fs-900);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-800);
+  }
+}
+
+h2 {
+  font-size: var(--fluid-fs-800);
+  letter-spacing: var(--letter-spacing-tight);
+
+  border-block-end: rem(3) dashed var(--clr-primary-300);
+  inline-size: 100%;
+  margin-block: var(--space-600);
+  padding-block-end: var(--space-400);
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-700);
+  }
+}
+
+h3 {
+  font-size: var(--fluid-fs-800);
+  @include breakpoint(large) {
+    font-size: var(--fluid-fs-600);
+  }
+}
+
+h4 {
+  font-size: var(--fluid-fs-400);
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-300);
+  }
+}
+
+blockquote {
+  font-size: var(--fluid-fs-400);
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-200);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    margin-block: var(--space-300);
+
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+
+  transition: all 200ms ease-in-out;
+}
+
+/* Change this later on */
+
+.logo {
+  filter: drop-shadow(rem(0) rem(0) rem(4) rgba(0, 0, 0, 15%));
+
+  transition: filter 300ms ease-in-out;
+  block-size: rem(60);
+  inline-size: rem(60);
+
+  &:hover {
+    filter: drop-shadow(rem(0) rem(0) rem(6) rgba(0, 0, 0, 40%));
+  }
+}
+
+.logo[data-place="footer"] {
+  block-size: rem(100);
+  inline-size: rem(100);
+}
+
+// .list-style-normal {
+
+//   list-style: circle;
+
+// }
+
+div[data-place="content-info"] {
+  justify-content: flex-start;
+
+  ul {
+    font-size: var(--fluid-fs-500);
+
+    list-style: disc;
+    min-inline-size: rem(130);
+
+    @include breakpoint(medium) {
+      font-size: var(--fluid-fs-400);
+    }
+  }
+}
